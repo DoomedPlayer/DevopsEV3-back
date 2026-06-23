@@ -58,8 +58,8 @@ jobs:
       run: |
         kubectl apply -f k8s/
 
-        kubectl set image deployment/back-ventas-deployment back-ventas=$ECR_REGISTRY/back-ventas:$TAG
-        kubectl set image deployment/back-despachos-deployment back-despachos=$ECR_REGISTRY/back-despachos:$TAG
+        kubectl set image deployment/back-ventas-deployment back-ventas=$ECR_REGISTRY/ev3/ventas:$TAG
+        kubectl set image deployment/back-despachos-deployment back-despachos=$ECR_REGISTRY/ev3/despachos:$TAG
 
         kubectl rollout status deployment/back-ventas-deployment
         kubectl rollout status deployment/back-despachos-deployment
