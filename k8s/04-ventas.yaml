@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: back-ventas
-        image: 675844720079.dkr.ecr.us-east-1.amazonaws.com/back-ventas:latest
+        image: 675844720079.dkr.ecr.us-east-1.amazonaws.com/ev3/ventas:latest
         ports:
         - containerPort: 8080
         env:
