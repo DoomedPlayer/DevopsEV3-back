@@ -28,7 +28,7 @@ jobs:
 
 
     - name: Build y Push de VENTAS
-      working-directory: ./Springboot-API-REST-VENTA
+      working-directory: ./back-Ventas_SpringBoot/Springboot-API-REST-VENTA
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ev3/ventas 
@@ -38,7 +38,7 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
     - name: Build y Push de DESPACHOS
-      working-directory: ./Springboot-API-REST-DESPACHO
+      working-directory: ./back-Despachos_SpringBoot/Springboot-API-REST-DESPACHO
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ev3/despachos 
